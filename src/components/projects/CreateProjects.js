@@ -4,7 +4,7 @@ import { createProject } from '../store/actions/projectActions';
 
 class CreateProject extends Component {
   state = {
-    taskTitle: '',
+    // taskTitle: '',
     startTime: '',
     endTime: '',
     currentTime: ''
@@ -48,12 +48,8 @@ class CreateProject extends Component {
             <h5 className="gray-text text-darken-3">Create Project</h5>
 
             <div className="input-field">
-              <label htmlFor="firstName">What are you doing?</label>
-              <input
-                type="text"
-                id="firstName"
-                onChange={this.onHandleChange}
-              />
+              <label htmlFor="title">What are you doing?</label>
+              <input type="text" id="title" onChange={this.onHandleChange} />
             </div>
 
             <div className="input-field">
