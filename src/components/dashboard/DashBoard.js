@@ -6,7 +6,6 @@ import { Redirect } from 'react-router-dom';
 
 import Notification from './Notification';
 import ProjectList from '../projects/ProjectList';
-import SignIn from '../auth/SignIn';
 
 class DashBoard extends Component {
   render() {
