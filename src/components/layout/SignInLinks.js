@@ -1,11 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { signOut } from '../store/actions/authActions';
 
-const SignIn = () => {
+const SignIn = props => {
   return (
     <ul className="right">
       <li>
-        <NavLink to="/">Log out</NavLink>
+        <a onClick={props.signOut}>Log out</a>
       </li>
       <li>
         <NavLink to="/create-project">New Project</NavLink>
@@ -18,4 +20,11 @@ const SignIn = () => {
     </ul>
   );
 };
-export default SignIn;
+
+const mapDispatchToProps = dispatch => {
+  return {
+    signOut: () => dispatch(signOut())
+  };
+};
+
+export default connect(null, mapDispatchToProps)(SignIn);
