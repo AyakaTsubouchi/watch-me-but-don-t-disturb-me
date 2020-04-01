@@ -40,6 +40,7 @@ class CreateProject extends Component {
   onHandleSubmit = e => {
     e.preventDefault();
     this.props.createProject(this.state);
+    this.props.history.push('/');
   };
   render() {
     const { auth } = this.props;
@@ -63,13 +64,6 @@ class CreateProject extends Component {
                 placeholder={this.state.currentHour}
                 onChange={this.onHandleChange}
               />
-              {/* :
-              <input
-                type="number"
-                id="startTime"
-                placeholder={this.state.currentMin}
-                onChange={this.onHandleChange}
-              /> */}
             </div>
             <div className="input-field">
               <label htmlFor="endTime">To</label>
@@ -79,13 +73,6 @@ class CreateProject extends Component {
                 placeholder={this.state.currentHour}
                 onChange={this.onHandleChange}
               />
-              {/* :
-              <input
-                type="number"
-                id="startTime"
-                placeholder={this.state.currentMin}
-                onChange={this.onHandleChange}
-              /> */}
             </div>
 
             <div className="input-field">
