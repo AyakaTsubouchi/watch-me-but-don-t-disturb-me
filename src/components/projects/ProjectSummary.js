@@ -8,7 +8,7 @@ export default function ProjectSummary({ project }) {
         <span className="card-title">Project Title:{project.title}</span>
         <p>posted by {project.authorFirstName}</p>
         <p className="graytext">
-          {moment(project.createdAt.toDate()).calendar()}
+          {/* {moment(project.createdAt.toDate()).calendar()} */}
         </p>
         <p className="graytext">From {project.startTImeH}</p>
         <p className="graytext">To {project.endTime}</p>
